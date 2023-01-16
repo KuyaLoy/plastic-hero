@@ -1,0 +1,203 @@
+.site-footer {
+    position: relative;
+
+    @media (max-width: 991px) {
+        text-align: center;
+
+        .remove-margin {
+            margin-top: -70px;
+        }
+    }
+
+    [class*=bubble-] {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: #ede8ff;
+        border: 1px solid #a98fff;
+        animation-name: bubbleMover;
+        animation-duration: 9s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        perspective: 100px;
+
+        @keyframes bubbleMover {
+            0% {
+                transform: translateY(0px) translateX(0) rotate(0);
+            }
+
+            30% {
+                transform: translateY(30px) translateX(50px) rotate(15deg);
+                transform-origin: center center;
+            }
+
+            50% {
+                transform: translateY(50px) translateX(100px) rotate(45deg);
+                transform-origin: right bottom;
+            }
+
+            80% {
+                transform: translateY(30px) translateX(50px) rotate(15deg);
+                transform-origin: left top;
+            }
+
+            100% {
+                transform: translateY(0px) translateX(0) rotate(0);
+                transform-origin: center center;
+            }
+        }
+    }
+
+    .bubble-1 {
+        background-color: #ddffe4;
+        border-color: #93ff6d;
+        top: 10px;
+        left: 20px;
+    }
+
+    .bubble-2 {
+        background-color: #eeffe8;
+        border-color: #b3ffa6;
+        bottom: 30px;
+        left: 10%;
+    }
+
+    .bubble-3 {
+        background-color: #ddffe4;
+        border-color: #93ff6d;
+        top: 40px;
+        left: 40%;
+    }
+
+    .bubble-4 {
+        background-color: #eeffe8;
+        border-color: #b3ffa6;
+        top: 10px;
+        right: 40%;
+    }
+
+    .bubble-5 {
+        background-color: #ddffe4;
+        border-color: #93ff6d;
+        bottom: 30px;
+        right: 25%;
+    }
+
+    .bubble-6 {
+        background-color: #eeffe8;
+        border-color: #b3ffa6;
+        top: 40%;
+        right: 10%;
+    }
+
+    .inner-container {
+        border: 1px solid #eaeaea;
+        border-left: 0;
+        border-right: 0;
+        padding: 86px 0;
+    }
+}
+
+.footer-widget {
+
+    ul,
+    h3,
+    p {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .widget-title {
+        margin-bottom: 28px;
+
+        h3 {
+            color: #2c9328;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+
+    ul.contact-list {
+        li {
+            color: #7a9277;
+
+            +li {
+                margin-top: 9px;
+            }
+        }
+    }
+
+    ul.links-list li {
+        +li {
+            margin-top: 10px;
+        }
+
+        a {
+            color: #7a9277;
+            font-size: 16px;
+            display: inline-block;
+            position: relative;
+            transition: all .4s ease;
+
+            &:before {
+                content: '\f101';
+                font-family: 'FontAwesome';
+                color: #4cb648;
+                font-size: 14px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) translateX(-15px);
+                opacity: 0;
+                transition: all .4s ease;
+            }
+
+            &:hover {
+                color: #4cb648;
+                transform: translateX(20px);
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .social-block {
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            width: 51px;
+            height: 51px;
+            border: 1px solid #7a9277;
+            line-height: 49px;
+            text-align: center;
+            background-color: #eeffe8;
+            color: #7a9277;
+            border-radius: 50%;
+            box-shadow: 0px 15px 30px 0px rgba(119, 123, 146, 0.1);
+            transition: all .4s ease;
+
+            &:hover {
+                color: #fff;
+                background-color: #4cb648;
+                border-color: #4cb648;
+            }
+        }
+    }
+}
+
+.bottom-footer {
+    padding: 25px 0;
+
+    p {
+        color: #777b92;
+        font-size: 16px;
+
+        a {
+            color: #4cb648;
+        }
+    }
+}
